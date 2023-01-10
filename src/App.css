@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover; 
   height: 600px;
-   
+   margin-top: -100px;
 }
 .img{
   width: 150px;
@@ -32,6 +32,18 @@ h1{
   background: rgb(255,255,255);
   background: radial-gradient(circle, rgba(255,255,255,1) 20%, rgba(224,224,224,1) 100%); 
   box-shadow: 1px 1px 20px rgb(100, 100, 100);
+  margin-top: -426px;
+}
+.box:hover{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 30px;
+  margin-left: 38%;
+  box-shadow: 5px 5px 30px rgb(59, 59, 59);
+  margin-top: -426px;
+  transition: 0.3s;
+  color: red;
 }
 .btn{
   border: none;
@@ -49,4 +61,14 @@ h1{
   background: #006ED0; 
   box-shadow: 1px 1px 20px rgb(100, 100, 100);
   
+}
+.counter{
+  background: -webkit-linear-gradient(#49FAFF, #00B0EA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgb(0, 48, 70);
+  margin-left: 44.3%;
+  margin-top: 0px;
+  font-weight: 900;
+  font-size: 23px;
 }
