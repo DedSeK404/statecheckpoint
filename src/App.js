@@ -5,9 +5,6 @@ import { useEffect } from "react";
 class App extends Component {
   constructor() {
     super()
-
- 
-
     this.state = {
       fullName: "Marwen Bennaceur",
       bio: "Veteren Graphic designer and amateur web developper",
@@ -20,11 +17,7 @@ class App extends Component {
 
     componentDidMount() {
      this.setState({ intervalId:setInterval(() => {
-      this.setState(prevState => {
-        return {
-          count: prevState.count + 1,
-        };
-      });
+      this.setState({count:this.state.count+1});
     }, 1000)})}
 
 
@@ -32,7 +25,12 @@ class App extends Component {
       clearInterval(this.state.intervalId);
     }
 
-
+toggle() {
+  this.setState({ shows: !this.state.shows })
+  if (!this.state.shows) {
+    this.setState({count:0});
+  }
+}
 
   render() {
     return (
@@ -52,11 +50,11 @@ class App extends Component {
           <h1>{this.state.profession}</h1>
 
           </div>
-         : ""}
-        <button className="btn" onClick={() => this.setState({ shows: !this.state.shows })}>
+         : <h2 className="counter">Counter : {this.state.count} </h2>}
+        <button className="btn" onClick={() =>this.toggle() }>
           Click me
         </button>
-        <h2 className="counter">Counter : {this.state.count} </h2>
+        {/* <h2 className="counter">Counter : {this.state.count} </h2> */}
         </>
       
     );
